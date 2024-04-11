@@ -1,2 +1,0 @@
-# IMH
-Internal Hobility Hub
