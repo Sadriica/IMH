@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <h5 class="card-title">Evaluado en {{ tiempo }} días</h5>
+            {% for item in items %}
+            <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item }}</h5>
+                        <p class="card-text">{{ sum[item] }}  | Minutos</p>
+                        <p class="card-text">{{ kw[item] }}   | Consumo </p>
+                        <p class="card-text">${{ cost[item] }} | Costo en pesos</p>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+{% endblock content %}

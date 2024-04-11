@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zay Shop eCommerce HTML CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="../static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/assets/css/templatemo.css">
+    <link rel="stylesheet" href="../static/assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="../static/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Start Top Nav -->
+    <nav class="navbar navbar-expand-lg d-lg-flex justify-content-between align-items-center" id="templatemo_nav_top">
+        <div class="container">
+            <a class="navbar-brand text-light" href="#">MideHogar</a>
+            <img src="../static/assets/img/Logo_OmegaHackblanco2 (1).png" id="img-nav" alt="Logo pequeño" class="navbar-brand-img">
+        </div>
+    </nav>
+    <!-- Close Top Nav -->
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow" id="templatemo_main_nav">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto"> <!-- Alinea los elementos a la izquierda -->
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('web.index') }}" id="templatemo_main_nav_text">Home</a>
+                    </li>
+                </ul>
+                <a class="navbar-brand mx-auto" href="#"> <!-- Coloca el logo en el centro -->
+                    <img src="../static/assets/img/logoCelsia.png" id="img-nav-main" alt="Logo pequeño" class="navbar-brand-img">
+                </a>
+                <ul class="navbar-nav ml-auto"> <!-- Alinea los elementos a la derecha --
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('web.graphic') }}" id="templatemo_main_nav_text">Grafica</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('web.show') }}" id="templatemo_main_nav_text">Lista</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Close Header -->
+
+    <section>
+
+        {% block content %}
+        {% endblock %}
+    </section>
+
+    <!-- Start Footer -->
+    <footer class="bg-black" id="tempaltemo_footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 pt-3">
+
+                    <ul class="list-unstyled text-light footer-link-list">
+
+                        <li>
+                            <a class="text-decoration-none" >Copyright © 2023 Magneto</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" >Medellin - Colombia</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" >11/04/2024</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 pt-3">
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" >IMH</a></li>
+			<!--<li><a class="text-decoration-none" href="https://www.instagram.com/novaeafit/">Nova</a></li>--!>
+                    </ul>
+                </div>
+
+            
+            </div>
+
+            
+
+  
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- End Script -->
+</body>
+
+</html>
