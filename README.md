@@ -9,17 +9,14 @@ Para ejecutar este proyecto se requiere hacer un git clone y ubicarse en la raiz
     cd flaskr
 
 Para el correcto desarrollo de este proyecto es necesario trabajar bajo un ambiente virtual para evitar problemas con las dependencias y sus versiones.
-Para crear un entorno virtual (windows) ejecuta:
 
-    python -m venv imhenv
-
-Si no te da, intenta con:
+Para crear un entorno virtual ejecuta:
 
     python -m venv imhenv
     
 Ejecutar el ambiente virtual:
 
-    imhenv\Scripts\activate
+    imhenv/Scripts/activate ó imhenv/bin/activate
 
 Finalmente, asegurate de tener pip instalado y instala las dependencias:
 
