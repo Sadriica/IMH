@@ -10,22 +10,22 @@ Para ejecutar este proyecto se requiere hacer un git clone y ubicarse en la raiz
 
 Para el correcto desarrollo de este proyecto es necesario trabajar bajo un ambiente virtual para evitar problemas con las dependencias y sus versiones.
 
-Para crear un entorno virtual ejecuta:
+1. Para crear un entorno virtual ejecuta:
 
     python -m venv imhenv
     
-Ejecutar el ambiente virtual:
+2. Ejecutar el ambiente virtual:
 
-    imhenv/Scripts/activate ó imhenv/bin/activate
+    source imhenv/bin/activate
 
-Finalmente, asegurate de tener pip instalado y instala las dependencias:
+3. Finalmente, asegurate de tener pip instalado y instala las dependencias:
 
     pip install -r requirements.txt
 
 Esto instalará todas las dependencias listadas en el archivo requirements.txt en tu entorno virtual.
 
 ### Nota
-El proyecto fue desarrollado principalmente en Linux. Comprobar las versiones en caso de que no funcione con el requirements.txt .
+El proyecto fue desarrollado principalmente en Linux. La instrucción del paso 2 es especifica, revisar como activar el ambiente en sus sistema operativo. Comprobar las versiones en caso de que no funcione con el requirements.txt .
 
 
 
