@@ -55,7 +55,7 @@ body, ul, li, p, a, label, input, div {
 .text-success { color: #59ab6e !important;}
 .text-light { color: #cfd6e1 !important;}
 .bg-dark { background-color: #212934 !important;}
-.bg-light { background-color: #e9eef5 !important;}
+.bg-light { background-color: #F2FBFF!important;}
 .bg-black { background-color: #1d242d !important;}
 .bg-success { background-color: #59ab6e !important;}
 .btn-success {
@@ -65,26 +65,24 @@ body, ul, li, p, a, label, input, div {
 .pagination .page-link:hover {color: #000;}
 .pagination .page-link:hover, .pagination .page-link.active {
   background-color: #69bb7e;
-  color: #fff;
+  color: #F2FBFF;
 }
 /* Nav */
 #templatemo_nav_top { 
   min-height: 40px;
-  background-color: #E85F24;
+  background-color: #F2FBFF;
 
 }
 
 #img-nav{
-  width: 30px; 
-  height: auto;
-  float: right;
+  width: 300px; 
+  height: 300px;
+  float: center;
 }
 
 #img-nav-main{
   max-height: 60px; 
   font-weight: bold; 
-
-
 }
 
 
@@ -92,7 +90,7 @@ body, ul, li, p, a, label, input, div {
 
 
 #templatemo_main_nav{
-  background-color: #FFC7AF
+  background-color: #F2FBFF;
 }
 #templatemo_main_nav a { color: #212934;}
 #templatemo_main_nav a:hover { color: #69bb7e;}
@@ -121,7 +119,7 @@ body, ul, li, p, a, label, input, div {
   line-height: 2.6em;
 }
 #tempaltemo_footer ul.footer-icons li:hover {
-  background-color: #cfd6e1;
+  background-color: #F2FBFF;
   transition: .5s;
 }
 #tempaltemo_footer ul.footer-icons li:hover i {
@@ -171,32 +169,171 @@ body, ul, li, p, a, label, input, div {
 
 
 /* Estilos para el contenedor del mensaje de bienvenida */
-#mensaje-bienvenida {
+
+#index-spaces-div{
+    height: 120px;
+}
+
+
+#index-welcome-img{
+  padding: 20px;
+  width: 450px; 
+  height: 450px;
+  float: center;
+}
+
+#index-welcome-div{
   text-align: center; /* Centrar el contenido */
-  padding: 20px; /* Añadir espacio alrededor del contenido */
-  background-color: #f0f0f0; /* Color de fondo */
+  padding: 80px; /* Añadir espacio alrededor del contenido */
+  background-color: #F2FBFF; /* Color de fondo */
   border-radius: 10px; /* Bordess redondeados */
 }
 
 /* Estilos para el texto del mensaje */
-#mensaje-bienvenida p {
+#index-welcome-div p {
   font-size: 18px; /* Tamaño de fuente */
   margin-bottom: 10px; /* Espacio inferior */
 }
 
 
-#index-welcome{
-  color: #E85F24;
-  margin: 20px; 
+#index-welcome-text{
+  color: #201D57;
+  padding-top: -80px;
   padding: 10px; 
+  font-size: 96px;
 }
+
+#index-about-div{
+  text-align: left ; /* Centrar el contenido izquierda*/
+  padding: 80px; /* Añadir espacio alrededor del contenido */
+  background-color: #F2FBFF; /* Color de fondo */
+  border-radius: 10px; /* Bordess redondeados */
+  padding-left: 40px;
+}
+
+#index-about-text{
+  color: #201D57;
+  margin: 20px; 
+  padding: 10px;  
+}
+
+#index-about-container{
+    display: inline-block;    
+}
+
+#index-about-text-about{
+    float: left;
+    color: #201D57;
+    padding-right: -10px;
+    padding: 5px; 
+    font-size: 96px;
+}
+
+#index-about-text-us{
+    float: left;
+    padding-left: -10px;
+    color: #F73859;
+    padding: 5px;
+    font-size: 96px;
+}
+
+#index-about-text-p-left{
+    float: left;
+    color: #201D57;
+    padding-right: -10px;
+    padding: 5px; 
+    font-size: 96px;
+}
+
+#index-about-text-p-right{
+    float: right;
+    color: #504F4F;
+    font-size: 30px;
+    font-weight: line-height;
+
+}
+
+#index-contact-div{
+  text-align: right; /* Centrar el contenido izquierda*/
+  padding: 80px; /* Añadir espacio alrededor del contenido */
+  background-color: #F2FBFF; /* Color de fondo */
+  border-radius: 10px; /* Bordess redondeados */
+  padding-left: 40px;
+}
+
+#index-contact-container{
+    display: inline-block;    
+}
+
+#index-contact-text-contactin{
+    float: left;
+    color: #201D57;
+    padding-right: -10px;
+    padding: 5px;
+    padding-right: -10px;
+    font-size: 96px; 
+}
+
+#index-contact-text-formation{
+    float: left;
+    margin-left: -12px;
+    color: #F73859;
+    padding: 5px;
+    font-size: 96px;
+}
+
+#index-contact-spaces-div{
+    height: 20px;
+}
+
+#index-contact-text-div{
+  text-align: center; /* Centrar el contenido izquierda*/
+  padding: 80px; /* Añadir espacio alrededor del contenido */
+  background-color: #F2FBFF; /* Color de fondo */
+  border-radius: 10px; /* Bordess redondeados */
+  padding-left: 40px;
+}
+
+#index-contact-text-container{
+    display: inline-block;    
+    text-align: left;
+    padding: 20px;
+}
+
+/*// btn */
+
+#btn-pink{
+    color: #201D57;
+    background-color:#F73859;
+    border-radius: 30px;
+    width: 200px;
+    height: 90px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    align: center;
+    line-height: -50;
+    font-size: 40px !important;
+    font-weight: 400 !important;
+    padding-top: 10px;
+}
+
+#btn-blue{
+    color: #F2FBFF;
+    background-color:#201D57;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+
+}
+
 
 /* Estilos para el botón de inicio */
 .btn-home {
   display: inline-block; /* Hacer que el botón sea en línea */
   padding: 10px 20px; /* Añadir espacio alrededor del texto del botón */
   background-color: #007bff; /* Color de fondo */
-  color: #fff; /* Color del texto */
+  color: #F2FBFF; /* Color del texto */
   text-decoration: none; /* Quitar subrayado */
   border-radius: 5px; /* Bordess redondeados */
   transition: background-color 0.3s; /* Transición suave */

@@ -12,15 +12,15 @@ Para el correcto desarrollo de este proyecto es necesario trabajar bajo un ambie
 
 1. Para crear un entorno virtual ejecuta:
 
-    python -m venv imhenv
+        python -m venv imhenv
     
 2. Ejecutar el ambiente virtual:
 
-    source imhenv/bin/activate
+        source imhenv/bin/activate
 
 3. Finalmente, asegurate de tener pip instalado y instala las dependencias:
 
-    pip install -r requirements.txt
+        pip install -r requirements.txt
 
 Esto instalará todas las dependencias listadas en el archivo requirements.txt en tu entorno virtual.
 

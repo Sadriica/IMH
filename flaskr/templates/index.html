@@ -1,9 +1,58 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div id="mensaje-bienvenida">
-        <h1 id="index-welcome" class="md-3 bg-3">Bienvenid@ a Internal Movility Hub</h1>
+    <div id="index-welcome-div">
+	<img src="../static/assets/img/IMH _Transparent.png" id="index-welcome-img" alt="Logo" class="navbar-brand-img">
+        <h1 id="index-welcome-text" class="md-3 bg-3">Internal Movility Hub</h1>
+	<button type="button" class="btn btn-primary" id="btn-pink" >Login</button>
+	<div id="index-spaces-div" ></div>
+    </div>
 
+    <div id="index-about-div">
+	<div id="index-about-container">
+	    <div id="index-about-text-about">
+		<h1 id="index-about-text-about" class="md-3 bg-3">About</h1>
+	    </div>
+	    <div id="index-about-text-us">
+		<h1 id="index-about-text-us" class="md-3 bg-3">Us</h1>
+	    </div>
+	</div>
+	<div id="index-about-container">
+	    <div id="index-about-text-p">
+		<h3 id="index-about-text-p">
+		This project is for employees who have the opportunity to work on different projects within their company, applying their knowledge and abilities. It’s a web application that employees can use to apply for and learn about different projects, enabling them to share knowledge and connect with others in the organization. Unlike our main competitor, whose platform focuses solely on project listings, our product offers a competitive advantage by providing personalized project recommendations based on the user's skills and interests, fostering a more tailored and engaging experience for employees.
+		</h3>
+	    </div>
+	    <div id="index-about-text-p">
+		<h3 id="index-about-text-p">
+		Internal Mobility Hub is presented as a powerful tool that goes beyond simply searching for projects. It is a career accelerator that drives ..employees' professional development by .....connecting them with opportunities that fit .........with their skills and interests.	
+		</h3>
+	    </div>
+	</div>
+    </div>
+
+    <div id="index-contact-div">
+	<div id="index-contact-container">
+	    <div id="index-contact-text-contactin">
+		<h1 id="index-contact-text-contactin" class="md-3 bg-3">Contact In</h1>
+	    </div>
+	    <div id="index-contact-text-formation">
+		<h1 id="index-contact-text-formation" class="md-3 bg-3">formation</h1>
+	    </div>
+	</div>
+	<div id="index-contact-spaces-div" ></div>
+	<div id="index-contact-text-container">
+	    <div id="index-about-text-p">
+		<h3 id="index-about-text-p">
+		    E-mail: support@imh.com		
+		</h3>
+	    </div>
+	    <div id="index-about-text-p">
+		<h3 id="index-about-text-p">
+		Internal Code: 451	
+		</h3>
+	    </div>
+	</div>
     </div>
 
 {% endblock content %}
