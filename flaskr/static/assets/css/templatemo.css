@@ -388,10 +388,91 @@ body, ul, li, p, a, label, input, div {
 #profile-container-cards{
     float: center;
     padding: 50px;
+    height: 650px;
+    background-color: #F2FBFF; 
+
+}
+
+#profile-div-card{
+    background-color: #F2FBFF; 
+    width: 18rem;
+    border-color:#F73859;
+    border-width: 3px;
+    border-radius: 20px;
+    height: 600px;
+    width: 350px;
+
+}
+
+#profile-image-card{
+    padding: 10px;
+    border-radius: 20px;
+    height:250px;
+    width:350px;
     
 
 }
 
+#profile-title-card{
+    float: center;
+    color: #504F4F;
+    font-size: 30px;
+    font-weight: bold;
+    width: 310px;
+
+}
+
+#profile-place-card{
+    float: center;
+    color: #201D57;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+#profile-company-card{
+    float: center;
+    color: #F73859;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+
+#profile-text-card{
+    float: Center;
+    color: #504F4F;
+    font-size: 20px;
+    font-weight: line-height;
+
+}
+
+#profile-body-card{
+    float: Center;
+    padding: 10px;
+    color: #504F4F;
+    height: 310px;
+    width: 350px;
+
+}
+
+
+#profile-btn-blue-empty{
+    color: #201D57;
+    border-width: 3px;
+    border-color: #201D57;
+    border-light: #201D57;
+    background-color:#F2FBFF;
+    border-radius: 30px;
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    align: center;
+    line-height: -50;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    padding-top: 10px;
+}
 
 /* btn */
 
