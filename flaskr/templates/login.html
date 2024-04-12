@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>IMH-Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/assets/css/templatemo.css">
+    <link rel="stylesheet" href="../static/assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="../static/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+<!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light" id="templatemo_main_nav">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-auto"> <!-- Alinea los elementos a la izquierda -->
+                    <li class="nav-item">
+                        <a class="navbar-toggler-icon" href="{{ url_for('web.index') }}" id="templatemo_main_nav_text"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Close Header --!>
+	
+    <div id="login-forms-div" >
+	<div id="login-row-div" class="row">
+	    <div class="col" id="login-names">
+		<h2>Email</h2>
+	    </div>
+	    <div class="col" id="login-questions">
+		<input type="email" class="form-control" id="btn-pink-empty" aria-describedby="emailHelp">
+	    </div> 
+	</div>
+    	<div id="login-row-div" class="row">
+	    <div class="col" id="login-names">
+		<h2>Password</h2>
+	    </div>
+	    <div class="col" id="login-questions">
+		<input type="email" class="form-control" id="btn-blue-empty" aria-describedby="emailHelp">
+	    </div> 
+	</div>
+	<div id="login-row-div" class="row">
+	    <div class="col" id="login-names">
+		<h2>Company</h2>
+	    </div>
+	    <div class="col" id="login-questions">
+		<select id="btn-pink-empty" class="form-select">
+		    <option >Magneto</option>
+		    <option >Magneton't</option>
+		</select>
+		<!--<input type="email" class="form-control" id="btn-pink-empty" aria-describedby="emailHelp">--!>
+	    </div> 
+	</div>
+	
+	<div id="index-login-spaces-div" ></div>
+	
+	<div>
+	    <button type="submit" class="btn btn-primary" id="btn-pink" >Login</button>
+	
+	</div>
+	
+	<div id="index-contact-spaces-div" ></div>
+	
+	<div>
+	    <button type="button" class="btn btn-primary" id="btn-gray" >Forgot Password?</button>
+	</div>
+    </div>
+
+
+</body>
+

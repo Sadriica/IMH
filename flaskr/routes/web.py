@@ -21,7 +21,10 @@ web_bp = Blueprint('web', __name__)
 def index_route():
     return user.index()
 
-@web_bp.route("/data/show", endpoint="show")
-def datos_grafica_route():
-    return data.show()
+@web_bp.route("/login", endpoint="login")
+def login_route():
+    return user.login()
 
+@web_bp.route("/register", endpoint="register")
+def login_route():
+    return user.register()

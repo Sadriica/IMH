@@ -300,19 +300,53 @@ body, ul, li, p, a, label, input, div {
     padding: 20px;
 }
 
-/*// btn */
+
+
+/* Login */
+
+#login-forms-div{
+    text-align: center;
+    padding: 200px;
+    background-color: #F2FBFF;
+
+}
+
+
+
+#login-row-div{
+  text-align: left; /* Centrar el contenido izquierda*/
+  padding: 20px; /* Añadir espacio alrededor del contenido */
+  background-color: #F2FBFF; /* Color de fondo */
+  border-radius: 10px; /* Bordess redondeados */
+  color: #504F4F;
+  padding-left: 200px;
+}
+
+#login-names{
+    margin-right:-800px;
+}
+
+#login-questions{
+    text-align: left;
+}
+
+#index-login-spaces-div{
+    height: 125px;
+}
+
+/* btn */
 
 #btn-pink{
     color: #201D57;
     background-color:#F73859;
     border-radius: 30px;
     width: 200px;
-    height: 90px;
+    height: 80px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     align: center;
     line-height: -50;
-    font-size: 40px !important;
+    font-size: 35px !important;
     font-weight: 400 !important;
     padding-top: 10px;
 }
@@ -326,6 +360,57 @@ body, ul, li, p, a, label, input, div {
     font-weight: 400 !important;
 
 }
+
+#btn-pink-empty{
+    color: #201D57;
+    border-width: 3px;
+    border-color: #F73859;
+    border-light: #F73859;
+    background-color:#F2FBFF;
+    border-radius: 30px;
+    width: 600px;
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    align: center;
+    line-height: -50;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    padding-top: 10px;
+}
+
+#btn-blue-empty{
+    color: #201D57;
+    border-width: 3px;
+    border-color: #201D57;
+    border-light: #201D57;
+    background-color:#F2FBFF;
+    border-radius: 30px;
+    width: 600px;
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    align: center;
+    line-height: -50;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    padding-top: 10px;
+}
+
+#btn-gray{
+    color: #F2FBFF;
+    background-color:#504F4F;
+    border-radius: 30px;
+    width: 400px;
+    height: 80px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    align: center;
+    line-height: -50;
+    font-size: 35px !important;
+    font-weight: 400 !important;
+    padding-top: 10px;
+
 
 
 /* Estilos para el botón de inicio */

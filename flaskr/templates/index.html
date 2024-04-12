@@ -4,7 +4,9 @@
     <div id="index-welcome-div">
 	<img src="../static/assets/img/IMH _Transparent.png" id="index-welcome-img" alt="Logo" class="navbar-brand-img">
         <h1 id="index-welcome-text" class="md-3 bg-3">Internal Movility Hub</h1>
-	<button type="button" class="btn btn-primary" id="btn-pink" >Login</button>
+	<a href="{{url_for('web.login')}}" >
+	    <button type="button" class="btn btn-primary" id="btn-pink" href="web.login" >Login</button>
+	</a>
 	<div id="index-spaces-div" ></div>
     </div>
 
