@@ -26,5 +26,9 @@ def login_route():
     return user.login()
 
 @web_bp.route("/register", endpoint="register")
-def login_route():
+def register_route():
     return user.register()
+
+@web_bp.route("/profile", endpoint="profile")
+def profile_route():
+    return user.profile()

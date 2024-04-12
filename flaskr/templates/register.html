@@ -18,7 +18,84 @@
 
 <body>
 
+<!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light" id="templatemo_main_nav">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-auto"> <!-- Alinea los elementos a la izquierda -->
+                    <li class="nav-item">
+                        <a class="navbar-toggler-icon" href="{{ url_for('web.index') }}" id="templatemo_main_nav_text"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Close Header --!>
+	
+    <div id="register-forms-div" >
+	<div id="login-row-div" class="row">
+	    <div class="col" id="login-names">
+		<h2>Company Name</h2>
+	    </div>
+	    <div class="col" id="login-questions">
+		<input type="email" class="form-control" id="btn-pink-empty" aria-describedby="emailHelp">
+	    </div> 
+	</div>
+    	<div id="login-row-div" class="row">
+	    <div class="col" id="login-names">
+		<h2>Business Name</h2>
+	    </div>
+	    <div class="col" id="login-questions">
+		<input type="email" class="form-control" id="btn-blue-empty" aria-describedby="emailHelp">
+	    </div> 
+	</div>
+	<div id="login-row-div" class="row">
+	    <div class="col" id="login-names">
+		<h2>Main Email</h2>
+	    </div>
+	    <div class="col" id="login-questions">
+		<input type="email" class="form-control" id="btn-pink-empty" aria-describedby="emailHelp">
+	    </div> 
+	</div>
+	<div id="login-row-div" class="row">
+	    <div class="col" id="login-names">
+		<h2>Name Person in charge</h2>
+	    </div>
+	    <div class="col" id="login-questions">
+		<input type="email" class="form-control" id="btn-blue-empty" aria-describedby="emailHelp">
+	    </div> 
+	</div>
+    	<div id="login-row-div" class="row">
+	    <div class="col" id="login-names">
+		<h2>Rol inside the company</h2>
+	    </div>
+	    <div class="col" id="login-questions">
+		<input type="email" class="form-control" id="btn-pink-empty" aria-describedby="emailHelp">
+	    </div> 
+	</div>
+	<div id="login-row-div" class="row">
+	    <div class="col" id="login-names">
+		<h2>One Time Password</h2>
+	    </div>
+	    <div class="col" id="login-questions">
+		<input type="email" class="form-control" id="btn-blue-empty" aria-describedby="emailHelp">
+	    </div> 
+	</div>
 
+	<div id="index-login-spaces-div" ></div>
+	
+	<div>
+	    <button type="submit" class="btn btn-primary" id="btn-blue">Register</button>
+	</div>
+	
+	<div id="index-contact-spaces-div" ></div>
+	<div id="register-spaces-div" ></div>
+    </div>
 
 
 </body>
+

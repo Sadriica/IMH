@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>IMH/Login</title>
+    <title>IMH/Profile</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -28,62 +28,44 @@
                 <ul class="navbar-nav mr-auto"> <!-- Alinea los elementos a la izquierda -->
                     <li class="nav-item">
                         <a class="navbar-toggler-icon" href="{{ url_for('web.index') }}" id="templatemo_main_nav_text"></a>
-                    </li>
+                    </li> 
                 </ul>
             </div>
         </div>
     </nav>
     
     <!-- Close Header --!>
-	
-    <div id="login-forms-div" >
-	<div id="login-row-div" class="row">
-	    <div class="col" id="login-names">
-		<h2>Email</h2>
+   
+    <div id="profile-welcome-div">
+	<div id="profile-container">
+	    <div id="profile-welcome-icon">
+		<h1 id="profile-welcome-icon" class="md-3 bg-3">You</h1>
 	    </div>
-	    <div class="col" id="login-questions">
-		<input type="email" class="form-control" id="btn-pink-empty" aria-describedby="emailHelp">
-	    </div> 
-	</div>
-    	<div id="login-row-div" class="row">
-	    <div class="col" id="login-names">
-		<h2>Password</h2>
+	    <div id="profile-welcome-welcome">
+		<h1 id="profile-welcome-welcome" class="md-3 bg-3">Welcome!</h1>
 	    </div>
-	    <div class="col" id="login-questions">
-		<input type="email" class="form-control" id="btn-blue-empty" aria-describedby="emailHelp">
-	    </div> 
-	</div>
-	<div id="login-row-div" class="row">
-	    <div class="col" id="login-names">
-		<h2>Company</h2>
+	</div>    
+    </div>
+
+ 
+
+
+
+    <div class="container text-center">
+	<div class="row">
+	    <div class="col">
+		Column
 	    </div>
-	    <div class="col" id="login-questions">
-		<select id="btn-pink-empty" class="form-select">
-		    <option >Magneto</option>
-		    <option >Magneton't</option>
-		</select>
-		<!--<input type="email" class="form-control" id="btn-pink-empty" aria-describedby="emailHelp">--!>
-	    </div> 
+	    <div class="col">
+		Column
+	    </div>
+	    <div class="col">
+		Column
+	    </div>
 	</div>
-	
-	<div id="index-login-spaces-div" ></div>
-	
-	<div>
-	    <a href="{{url_for('web.profile')}}" >
-		<button type="submit" class="btn btn-primary" id="btn-pink" >Login</button>
-	    </a>
-	</div>
-	
-	<div id="index-contact-spaces-div" ></div>
-	
-	<div>
-	    <a href="{{url_for('web.register')}}" >
-		<button type="button" class="btn btn-primary" id="btn-gray" >Forgot Password?</button>
-	    </a>
-	</div>
-	<div id="register-spaces-div" ></div>
     </div>
 
 
-</body>
 
+
+</body>
