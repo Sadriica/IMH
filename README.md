@@ -24,6 +24,11 @@ Para el correcto desarrollo de este proyecto es necesario trabajar bajo un ambie
 
 Esto instalará todas las dependencias listadas en el archivo requirements.txt en tu entorno virtual.
 
+4. Para ejecutar el servidor usar:
+
+        flask --app /home/srm/Uni/IngSis/IMH/flaskr/app.py --debug run
+
+
 ### Nota
 El proyecto fue desarrollado principalmente en Linux. La instrucción del paso 2 es especifica, revisar como activar el ambiente en sus sistema operativo. Comprobar las versiones en caso de que no funcione con el requirements.txt .
 
