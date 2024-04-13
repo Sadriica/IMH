@@ -32,3 +32,11 @@ def register_route():
 @web_bp.route("/profile", endpoint="profile")
 def profile_route():
     return user.profile()
+
+@web_bp.route("/register_response", endpoint="register_response")
+def register_response_route():
+    return user.register_response()
+
+@web_bp.route("/forgot_password", endpoint="forgot_password")
+def profile_route():
+    return user.forgot_password()

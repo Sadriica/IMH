@@ -331,6 +331,7 @@ body, ul, li, p, a, label, input, div {
 
 #index-login-spaces-div{
     height: 125px;
+    background-color: #F2FBFF;
 }
 
 
@@ -346,6 +347,24 @@ body, ul, li, p, a, label, input, div {
 #register-spaces-div{
     height: 60px;
 }
+
+/* register_response */
+
+#register-response-div{
+  text-align: center; /* Centrar el contenido */
+  padding: 350px; /* Añadir espacio alrededor del contenido */
+  background-color: #F2FBFF; /* Color de fondo */
+  border-radius: 10px; /* Bordess redondeados */
+}
+
+#register-response-spaces-div{
+    height: 100px;
+}
+
+#register-response-spaces-div-bottom{
+    height: 100px;
+}
+
 
 
 
@@ -472,6 +491,12 @@ body, ul, li, p, a, label, input, div {
     font-size: 20px !important;
     font-weight: 400 !important;
     padding-top: 10px;
+}
+
+
+#profile-spaces-div{
+    height: 140px;
+    background-color: #F2FBFF;
 }
 
 /* btn */
