@@ -42,7 +42,7 @@ def login():
         else:
             flash('Correo electrónico, contraseña o compañía incorrectos.')
     companies = CompanyAdmin.query.all()
-    return render_template('web.login', companies=companies)
+    return redirect('web.login', companies=companies)
 
 @web_bp.route('/logout')
 @login_required
