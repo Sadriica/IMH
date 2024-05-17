@@ -14,7 +14,7 @@ BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
 def create_app():
     app = Flask(__name__)
-    SQLALCHEMY_DATABASE_URI = f'sqlite:///{BASE_DIR}/app.db'  
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{BASE_DIR}/app.db'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SECRET_KEY'] = 'magneto'
 
