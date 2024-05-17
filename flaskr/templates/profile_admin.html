@@ -78,8 +78,8 @@
     </div>
 
     <h1>Gestionar Empleados</h1>
-    <a href="{{ url_for('web.companiescheck') }}"><button id="btn-blue">Companies check</button></a>
-    <button onclick="showForm('create')" id="btn-pink">Add Employee</button>
+    <a href="{{ url_for('web.companiescheck') }}"><button id="btn-blue-admin">Companies check</button></a>
+    <button onclick="showForm('create')" id="btn-pink-admin">Add</button>
     <table>
         <thead>
             <tr>
@@ -100,11 +100,11 @@
                 <td>{{ employee.company.company_name }}</td>
                 <td>{{ employee.position }}</td>
                 <td>
-                    <button onclick="showForm('edit', {{ {'id': employee.id, 'email': employee.email,'name': employee.name, 'password': employee.password, 'position': employee.position, 'company_id': employee.company_id} | tojson | safe }})" id="btn-blue">Edit</button>
+                    <button onclick="showForm('edit', {{ {'id': employee.id, 'email': employee.email,'name': employee.name, 'password': employee.password, 'position': employee.position, 'company_id': employee.company_id} | tojson | safe }})" id="btn-blue-admin">Edit</button>
                     <form action="{{ url_for('web.manage_employees') }}" method="POST" style="display:inline;">
                         <input type="hidden" name="action" value="delete">
                         <input type="hidden" name="employee_id" value="{{ employee.id }}">
-                        <button type="submit" id="btn-pink">Delete</button>
+                        <button type="submit" id="btn-pink-admin">Delete</button>
                     </form>
                 </td>
             </tr>

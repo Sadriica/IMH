@@ -551,6 +551,27 @@ body, ul, li, p, a, label, input, div {
     padding-top: 0.625rem;
 }
 
+#btn-pink-admin {
+    color: #201D57;
+    background-color: #F73859;
+    border-radius: 1.875rem;
+    width: 10.5rem;
+    height: 4rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    align: center;
+}
+
+#btn-blue-admin {
+    color: #F2FBFF;
+    background-color: #201D57;
+    border-radius: 1.875rem;
+    width: 10.5rem;
+    height: 4rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center
+}
+
 
 
 /* Estilos para el botón de inicio */
