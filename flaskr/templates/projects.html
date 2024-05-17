@@ -19,14 +19,21 @@
         .more-info {
             display: none;
         }
+        .card-img-top {
+            max-height: 200px;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <h1>Proyectos</h1>
+        <a href="{{ url_for('web.create_project') }}" class="btn btn-primary mb-3">Crear Proyecto</a>
         <div class="row">
             {% for project in projects %}
             <div class="col-md-4">
                 <div class="card">
+                    <img src="{{ project.image }}" class="card-img-top" alt="Imagen del proyecto">
                     <div class="card-header" data-toggle="collapse" data-target="#collapse{{ loop.index }}">
                         <h5 class="card-title">{{ project.title }}</h5>
                         <p class="card-text">{{ project.location }}</p>

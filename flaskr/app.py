@@ -6,6 +6,7 @@ from flask_migrate import Migrate
 from models.database import db
 from models.CompanyAdmin import CompanyAdmin
 from models.Employee import Employee
+from models.Project import Project
 
 # Importa tus módulos personalizados
 from routes.web import web_bp

@@ -178,25 +178,21 @@ def index_route():
 
 @web_bp.route('/projects')
 def projects():
-    projects = [
-        {
-            'title': 'Modelación Numérica',
-            'location': 'Medellín, Colombia',
-            'company': 'Magneto',
-            'description': 'Se busca encontrar modelos de computación matemática que permitan llegar a interpretar imágenes de tipo DICOM.'
-        },
-        {
-            'title': 'Internal Mobility Hub',
-            'location': 'Medellín, Colombia',
-            'company': 'Magneto',
-            'description': 'El proyecto tiene el propósito de crear un MPV sobre un Sistema que permita la oferta y postulación de proyectos dentro de la empresa.'
-        },
-        {
-            'title': 'Software Seguimiento a Procesos',
-            'location': 'Medellín, Colombia',
-            'company': 'Magneto',
-            'description': 'Con el ideal de agilizar algunos procesos, se ha planteado desarrollar un sistema de software que permita su seguimiento en diferentes situaciones.'
-        }
-    ]
+    projects = Project.query.all()
     return render_template('projects.html', projects=projects)
+
+@web_bp.route('/create_project', methods=['GET', 'POST'])
+def create_project():
+    if request.method == 'POST':
+        title = request.form['title']
+        location = request.form['location']
+        company = request.form['company']
+        description = request.form['description']
+        image = request.form['image']
+        new_project = Project(title=title, location=location, company=company, description=description, image=image)
+        db.session.add(new_project)
+        db.session.commit()
+        flash('Proyecto creado con éxito.')
+        return redirect(url_for('web.projects'))
+    return render_template('create_project.html')
 
