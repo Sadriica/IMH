@@ -19,6 +19,8 @@ def create_app():
     app.register_blueprint(web_bp)
 
     from models.CompanyAdmin import CompanyAdmin
+    with app.app_context():
+        db.create_all()
 
     return app
 
@@ -31,7 +33,5 @@ def create_app():
 
 if __name__ == '__main__':
     app = create_app()
-    with app.app_context():
-        db.create_all()  # Crea las tablas si no existen
     app.run(debug=True)
 

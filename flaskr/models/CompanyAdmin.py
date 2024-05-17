@@ -3,6 +3,7 @@
 from models.database import db
 
 class CompanyAdmin(db.Model):
+    __tablename__ = 'company_admin'
     id = db.Column(db.Integer, primary_key=True)
     company_name = db.Column(db.String(100), nullable=False)
     business_name = db.Column(db.String(100), nullable=False)
