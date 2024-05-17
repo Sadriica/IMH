@@ -24,7 +24,7 @@ def create_app():
 
     login_manager = LoginManager()
     login_manager.init_app(app)
-    login_manager.login_view = 'web.login'
+    login_manager.login_view = 'login'
 
     def load_user(user_id):
         return Employee.query.get(int(user_id))
