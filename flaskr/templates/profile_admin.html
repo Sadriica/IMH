@@ -23,6 +23,7 @@
                 document.getElementById('form-title').innerText = 'Nuevo Empleado';
                 document.getElementById('employee-id').value = '';
                 document.getElementById('employee-name').value = '';
+                document.getElementById('employee-email').value = '';
                 document.getElementById('employee-password').value = '';
                 document.getElementById('employee-position').value = '';
                 document.getElementById('form-company-id').value = '';
@@ -30,6 +31,7 @@
                 document.getElementById('form-title').innerText = 'Editar Empleado';
                 document.getElementById('employee-id').value = employee.id;
                 document.getElementById('employee-name').value = employee.name;
+                document.getElementById('employee-email').value = employee.email;
                 document.getElementById('employee-password').value = employee.password;
                 document.getElementById('employee-position').value = employee.position;
                 document.getElementById('form-company-id').value = employee.company_id;
@@ -83,6 +85,7 @@
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
+		<th>Email</th>
                 <th>Compañía</th>
                 <th>Posición</th>
                 <th>Acciones</th>
@@ -92,11 +95,12 @@
             {% for employee in employees %}
             <tr>
                 <td>{{ employee.id }}</td>
+		 <td>{{ employee.email }}</td>
                 <td>{{ employee.name }}</td>
                 <td>{{ employee.company.company_name }}</td>
                 <td>{{ employee.position }}</td>
                 <td>
-                    <button onclick="showForm('edit', {{ {'id': employee.id, 'name': employee.name, 'password': employee.password, 'position': employee.position, 'company_id': employee.company_id} | tojson | safe }})">Editar</button>
+                    <button onclick="showForm('edit', {{ {'id': employee.id, 'email': employee.email,'name': employee.name, 'password': employee.password, 'position': employee.position, 'company_id': employee.company_id} | tojson | safe }})">Editar</button>
                     <form action="{{ url_for('web.manage_employees') }}" method="POST" style="display:inline;">
                         <input type="hidden" name="action" value="delete">
                         <input type="hidden" name="employee_id" value="{{ employee.id }}">
@@ -115,6 +119,8 @@
             <input type="hidden" id="employee-id" name="employee_id">
             <label for="employee-name">Nombre:</label>
             <input type="text" id="employee-name" name="name" required><br>
+	     <label for="employee-name">Email:</label>
+            <input type="text" id="employee-name" name="email" required><br>
             <label for="employee-password">Contraseña:</label>
             <input type="password" id="employee-password" name="password" required><br>
             <label for="form-company-id">Compañía:</label>

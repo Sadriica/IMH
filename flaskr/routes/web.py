@@ -107,24 +107,26 @@ def manage_employees():
         action = request.form.get('action')
         if action == 'create':
             name = request.form['name']
+            email = request.form['email']
             password = request.form['password']
             company_id = request.form['company_id']
             position = request.form['position']
             try:
-                new_employee = Employee(name=name, password=password, company_id=company_id, position=position)
+                new_employee = Employee(name=name, email=email, password=password, company_id=company_id, position=position)
                 db.session.add(new_employee)
                 db.session.commit()
                 flash('Empleado creado con éxito.')
             except Exception as e:
                 db.session.rollback()
                 flash(f'Error al crear empleado: {e}')
-            return redirect(url_for('web.manage_employees'))
+            return redirect(url_for('web.profile_admin'))
         elif action == 'edit':
             employee_id = request.form['employee_id']
             employee = Employee.query.get(employee_id)
             if employee:
                 try:
                     employee.name = request.form['name']
+                    employee.email = request.form['email']
                     employee.password = request.form['password']
                     employee.company_id = request.form['company_id']
                     employee.position = request.form['position']
@@ -135,7 +137,7 @@ def manage_employees():
                     flash(f'Error al actualizar empleado: {e}')
             else:
                 flash('Empleado no encontrado.')
-            return redirect(url_for('web.manage_employees'))
+            return redirect(url_for('web.profile_admin'))
         elif action == 'delete':
             employee_id = request.form['employee_id']
             employee = Employee.query.get(employee_id)
@@ -149,13 +151,13 @@ def manage_employees():
                     flash(f'Error al eliminar empleado: {e}')
             else:
                 flash('Empleado no encontrado.')
-            return redirect(url_for('web.manage_employees'))
+            return redirect(url_for('web.profile_admin'))
 
     employees = Employee.query.all()
     companies = CompanyAdmin.query.all()
     if not companies:
         flash('No hay compañías disponibles.')
-    return render_template('manage_employees.html', employees=employees, companies=companies)
+    return render_template('profile_admin.html', employees=employees, companies=companies)
 
 
 
