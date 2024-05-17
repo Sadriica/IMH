@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
-
     <script>
         function showForm(action, employee = null) {
             document.getElementById('form-action').value = action;
@@ -43,6 +42,7 @@
             document.getElementById('employee-form').style.display = 'none';
         }
     </script>
+  
 </head>
 
 <body>
@@ -76,7 +76,6 @@
 	</div>    
     </div>
 
-    
     <h1>Gestionar Empleados</h1>
     <button onclick="showForm('create')">Agregar Nuevo Empleado</button>
     <table>
@@ -120,6 +119,7 @@
             <input type="password" id="employee-password" name="password" required><br>
             <label for="form-company-id">Compañía:</label>
             <select id="form-company-id" name="company_id" required>
+                <option value="" disabled selected>Selecciona una compañía</option>
                 {% for company in companies %}
                 <option value="{{ company.id }}">{{ company.company_name }}</option>
                 {% endfor %}
@@ -130,5 +130,6 @@
             <button type="button" onclick="hideForm()">Cancelar</button>
         </form>
     </div>
-
+    
 </body>
+</html>
