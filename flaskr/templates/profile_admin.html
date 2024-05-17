@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../static/assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
- <script>
+    <script>
         function showForm(action, employee = null) {
             document.getElementById('form-action').value = action;
 
@@ -40,7 +40,7 @@
         function hideForm() {
             document.getElementById('employee-form').style.display = 'none';
         }
-    </script> 
+    </script>
 
 </head>
 
@@ -77,7 +77,7 @@
 
     <h1>Gestionar Empleados</h1>
     <a href="{{ url_for('web.companiescheck') }}"><button>Companies check</button></a>
-     <button onclick="showForm('create')">Agregar Nuevo Empleado</button>
+    <button onclick="showForm('create')">Agregar Nuevo Empleado</button>
     <table>
         <thead>
             <tr>
@@ -96,7 +96,7 @@
                 <td>{{ employee.company.company_name }}</td>
                 <td>{{ employee.position }}</td>
                 <td>
-                    <button onclick="showForm('edit', {{ employee|tojson|safe }})">Editar</button>
+                    <button onclick="showForm('edit', {{ {'id': employee.id, 'name': employee.name, 'password': employee.password, 'position': employee.position, 'company_id': employee.company_id} | tojson | safe }})">Editar</button>
                     <form action="{{ url_for('web.manage_employees') }}" method="POST" style="display:inline;">
                         <input type="hidden" name="action" value="delete">
                         <input type="hidden" name="employee_id" value="{{ employee.id }}">
@@ -129,7 +129,7 @@
             <button type="submit">Guardar</button>
             <button type="button" onclick="hideForm()">Cancelar</button>
         </form>
-    </div>
+    </div> 
 
 
     </body>

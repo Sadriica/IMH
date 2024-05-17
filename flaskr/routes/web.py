@@ -78,7 +78,6 @@ def register_company():
 
     return redirect(url_for('web.profile_admin'))
 
-
 @web_bp.route('/employees', methods=['GET', 'POST'])
 def manage_employees():
     if request.method == 'POST':
@@ -131,7 +130,7 @@ def manage_employees():
                 flash('Empleado no encontrado.')
                 return redirect(url_for('web.manage_employees'))
 
-
+   
 @web_bp.route('/companies_check', methods=['GET', 'POST'])
 def companiescheck():
     employees = Employee.query.all()
