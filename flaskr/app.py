@@ -34,7 +34,7 @@ with app.app_context():
     db.create_all()
     print("Tables created successfully")
     print(f"Database is located at: {app.config['SQLALCHEMY_DATABASE_URI']}")
-    return app
+
 
 
 app.register_blueprint(web_bp)
