@@ -1,5 +1,5 @@
 
-from app import db
+from ../database import db
 
 class CompanyAdmin(db.Model):
     id = db.Column(db.Integer, primary_key=True)

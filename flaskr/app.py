@@ -1,26 +1,23 @@
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from database import db
 from models.CompanyAdmin import CompanyAdmin
 from models.Employee import Employee
 
 # Importa tus módulos personalizados
 from routes.web import web_bp
 
-app = Flask(__name__)
-
-# Configuración básica de la aplicación
-app = Flask(__name__)
-db = SQLAlchemy()
-
-def setup_app():
-    app.config['SECRET_KEY'] = 'magneto'
+def create_app():
+    app = Flask(__name__)
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
     db.init_app(app)
 
-    return app
+    from models.companyadmin import CompanyAdmin
 
+    return app
 
 
 # Inicialización de SQLAlchemy
@@ -31,7 +28,6 @@ def setup_app():
 app.register_blueprint(web_bp)
 
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
+    app = create_app()
     app.run(debug=True)
 
