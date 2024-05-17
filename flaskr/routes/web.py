@@ -28,7 +28,7 @@ def index_route():
     return user.index()
 
 
-@web_bp.route('/login', methods=['GET', 'POST'], endpoint="login")
+@web_bp.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         email = request.form['email']
@@ -38,15 +38,15 @@ def login():
         if employee and employee.password == password:
             login_user(employee)
             flash('Inicio de sesión exitoso.')
-            return redirect(url_for('web.profile'))
+            return redirect(url_for('web.manage_employees'))
         else:
             flash('Correo electrónico, contraseña o compañía incorrectos.')
     companies = CompanyAdmin.query.all()
-    return redirect(url_for('web.login'))
+    return render_template('../templates/login.html', companies=companies)
 
 @web_bp.route('/logout')
 @login_required
- def logout():
+def logout():
     logout_user()
     flash('Has cerrado sesión.')
     return redirect(url_for('web.login'))
