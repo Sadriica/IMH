@@ -197,3 +197,10 @@ def create_project():
         return redirect(url_for('web.projects'))
     return render_template('create_projects.html')
 
+@web_bp.route('/delete_project/<int:project_id>', methods=['POST'])
+def delete_project(project_id):
+    project = Project.query.get_or_404(project_id)
+    db.session.delete(project)
+    db.session.commit()
+    flash('Proyecto eliminado con éxito.')
+    return redirect(url_for('web.projects'))
