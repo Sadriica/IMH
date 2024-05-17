@@ -21,8 +21,10 @@ def create_app():
 
     from models.CompanyAdmin import CompanyAdmin
     with app.app_context():
+        print("Creating database tables...")
         db.create_all()
-
+        print("Tables created successfully")
+        print(f"Database is located at: {app.config['SQLALCHEMY_DATABASE_URI']}")
     return app
 
 
