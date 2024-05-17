@@ -1,6 +1,7 @@
 from flask import Blueprint
 from flask import request, redirect, url_for, render_template,flash
 from models.CompanyAdmin import CompanyAdmin
+from models.Employee import Employee
 from models.database import db
 
 
@@ -107,6 +108,7 @@ def manage_employees():
                 db.session.delete(employee)
                 db.session.commit()
                 flash('Empleado eliminado con éxito.')
+
 @web_bp.route('/companies_check', methods=['GET', 'POST'])
 def companiescheck():
     employees = Employee.query.all()
