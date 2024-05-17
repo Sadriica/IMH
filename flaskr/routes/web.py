@@ -1,5 +1,5 @@
 from flask import Blueprint
-from flask import request, redirect, url_for, render_template
+from flask import request, redirect, url_for, render_template,flash
 from models.CompanyAdmin import CompanyAdmin
 from models.database import db
 
