@@ -44,12 +44,12 @@ def login():
     companies = CompanyAdmin.query.all()
     return redirect(url_for('web.login'))
 
-@web_bp.route('/logout')
-@login_required
-    def logout():
-        logout_user()
-        flash('Has cerrado sesión.')
-        return redirect(url_for('web.login'))
+#@web_bp.route('/logout')
+#@login_required
+# def logout():
+#    logout_user()
+#    flash('Has cerrado sesión.')
+#    return redirect(url_for('web.login'))
 
 @web_bp.route("/register", endpoint="register")
 def register_route():
