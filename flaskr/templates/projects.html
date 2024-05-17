@@ -30,10 +30,27 @@
     </style>
 </head>
 <body>
+ <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light" id="templatemo_main_nav">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-auto"> <!-- Alinea los elementos a la izquierda -->
+                    <li class="nav-item">
+                        <a class="navbar-toggler-icon" href="{{ url_for('web.index') }}" id="templatemo_main_nav_text"></a>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
     <div class="container">
         <h1>Proyectos</h1>
         <div class="row">
-	    <a href="{{url_for('web.create_project')}}" class="btn btn-primary mb-3" id="btn-blue">Create Project</a>
+	    <a href="{{url_for('web.create_project')}}" class="btn btn-primary mb-3" id="profile-btn-blue-empty">Create Project</a>
 	    <div id="register-spaces-div" ></div>
             {% for project in projects %}
             <div class="col-md-4">
