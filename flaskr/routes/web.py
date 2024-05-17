@@ -70,6 +70,7 @@ def register_response_route():
 @web_bp.route("/forgot_password", endpoint="forgot_password")
 def profile_route():
  return user.register()
+
 @web_bp.route("/register_company", methods=['POST'])
 def register_company():
     print(request.form)
@@ -100,9 +101,10 @@ def register_company():
     return redirect(url_for('web.profile_admin'))
 
 @web_bp.route('/employees', methods=['GET', 'POST'])
+@login_required
 def manage_employees():
     if request.method == 'POST':
-        action = request.form['action']
+        action = request.form.get('action')
         if action == 'create':
             name = request.form['name']
             password = request.form['password']
@@ -116,7 +118,7 @@ def manage_employees():
             except Exception as e:
                 db.session.rollback()
                 flash(f'Error al crear empleado: {e}')
-                return redirect(url_for('web.manage_employees'))
+            return redirect(url_for('web.manage_employees'))
         elif action == 'edit':
             employee_id = request.form['employee_id']
             employee = Employee.query.get(employee_id)
@@ -131,10 +133,9 @@ def manage_employees():
                 except Exception as e:
                     db.session.rollback()
                     flash(f'Error al actualizar empleado: {e}')
-                    return redirect(url_for('web.manage_employees'))
             else:
                 flash('Empleado no encontrado.')
-                return redirect(url_for('web.manage_employees'))
+            return redirect(url_for('web.manage_employees'))
         elif action == 'delete':
             employee_id = request.form['employee_id']
             employee = Employee.query.get(employee_id)
@@ -146,12 +147,18 @@ def manage_employees():
                 except Exception as e:
                     db.session.rollback()
                     flash(f'Error al eliminar empleado: {e}')
-                    return redirect(url_for('web.manage_employees'))
             else:
                 flash('Empleado no encontrado.')
-                return redirect(url_for('web.manage_employees'))
+            return redirect(url_for('web.manage_employees'))
 
-   
+    employees = Employee.query.all()
+    companies = CompanyAdmin.query.all()
+    if not companies:
+        flash('No hay compañías disponibles.')
+    return render_template('manage_employees.html', employees=employees, companies=companies)
+
+
+
 @web_bp.route('/companies_check', methods=['GET', 'POST'])
 def companiescheck():
     employees = Employee.query.all()
@@ -161,3 +168,7 @@ def companiescheck():
         flash('No hay compañías disponibles.')
     return render_template('profile_admin.html', employees=employees, companies=companies)
 
+
+@web_bp.route('/')
+def index_route():
+    return render_template('index.html')
