@@ -33,6 +33,10 @@ def login_route():
 def register_route():
     return user.register()
 
+@web_bp.route("/profile_admin", endpoint="profile_admin")
+def profile_admin_route():
+    return user.profile_admin()
+
 @web_bp.route("/profile", endpoint="profile")
 def profile_route():
     return user.profile()
@@ -65,4 +69,4 @@ def register_company():
     db.session.add(new_company)
     db.session.commit()
 
-    return redirect(url_for('web.profile')) 
+    return redirect(url_for('web.profile_admin')) 

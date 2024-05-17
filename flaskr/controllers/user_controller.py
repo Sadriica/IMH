@@ -6,6 +6,8 @@ def login():
     return render_template('login.html')
 def register():
     return render_template('register.html')
+def profile_admin():
+    return render_template('profile_admin.html')
 def profile():
     return render_template('profile.html')
 def register_response():
