@@ -65,4 +65,4 @@ def register_company():
     db.session.add(new_company)
     db.session.commit()
 
-    return redirect(url_for('some_page')) 
+    return redirect(url_for('web.profile')) 
