@@ -1,6 +1,8 @@
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
+from config import Config
 from models.database import db
 from models.CompanyAdmin import CompanyAdmin
 from models.Employee import Employee
