@@ -24,7 +24,7 @@ fileConfig(config.config_file_name)
 # import your models here
 sys.path.insert(0, os.path.realpath(os.path.join(os.path.dirname(__file__), '..')))
 from models.database import db
-from models.companyadmin import CompanyAdmin
+from models.CompanyAdmin import CompanyAdmin
 from models.Employee import Employee
 
 target_metadata = db.metadata
