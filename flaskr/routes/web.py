@@ -75,4 +75,39 @@ def register_company():
     db.session.add(new_company)
     db.session.commit()
 
-    return redirect(url_for('web.profile_admin')) 
+    return redirect(url_for('web.profile_admin'))
+
+@web_bp.route('/employees', methods=['GET', 'POST'])
+def manage_employees():
+    if request.method == 'POST':
+        action = request.form['action']
+        if action == 'create':
+            name = request.form['name']
+            password = request.form['password']
+            company_id = request.form['company_id']
+            position = request.form['position']
+            new_employee = Employee(name=name, password=password, company_id=company_id, position=position)
+            db.session.add(new_employee)
+            db.session.commit()
+            flash('Empleado creado con éxito.')
+        elif action == 'edit':
+            employee_id = request.form['employee_id']
+            employee = Employee.query.get(employee_id)
+            if employee:
+                employee.name = request.form['name']
+                employee.password = request.form['password']
+                employee.company_id = request.form['company_id']
+                employee.position = request.form['position']
+                db.session.commit()
+                flash('Empleado actualizado con éxito.')
+        elif action == 'delete':
+            employee_id = request.form['employee_id']
+            employee = Employee.query.get(employee_id)
+            if employee:
+                db.session.delete(employee)
+                db.session.commit()
+                flash('Empleado eliminado con éxito.')
+
+    employees = Employee.query.all()
+    companies = CompanyAdmin.query.all()
+    return render_template('manage_employees.html', employees=employees, companies=companies)

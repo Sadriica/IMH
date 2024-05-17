@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nuevo Empleado</title>
+</head>
+<body>
+    <h1>Nuevo Empleado</h1>
+    <form action="{{ url_for('web.new_employee') }}" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required><br>
+        <label for="company_id">Compañía:</label>
+        <select id="company_id" name="company_id" required>
+            {% for company in companies %}
+            <option value="{{ company.id }}">{{ company.company_name }}</option>
+            {% endfor %}
+        </select><br>
+        <label for="position">Posición:</label>
+        <input type="text" id="position" name="position" required><br>
+        <button type="submit">Crear Empleado</button>
+    </form>
+</body>
+</html>
+
