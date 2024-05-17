@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask import request, redirect, url_for, render_template
-from models import CompanyAdmin
+from models.CompanyAdmin import CompanyAdmin
 from models.database import db
 
 
@@ -54,7 +54,7 @@ def register_company():
     role_in_company = request.form['role_in_company']
     one_time_password = request.form['one_time_password']
 
-    new_company = models.CompanyAdmin(
+    new_company = CompanyAdmin(
         company_name=company_name,
         business_name=business_name,
         main_email=main_email,
