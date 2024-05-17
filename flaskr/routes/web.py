@@ -107,7 +107,8 @@ def manage_employees():
                 db.session.delete(employee)
                 db.session.commit()
                 flash('Empleado eliminado con éxito.')
-
+@web_bp.route('/companies_check', methods=['GET', 'POST'])
+def companiescheck():
     employees = Employee.query.all()
     companies = CompanyAdmin.query.all()
     print(f"Found {len(companies)} companies")  # Agregar depuración
