@@ -32,7 +32,7 @@
 <body>
     <div class="container">
         <h1>Proyectos</h1>
-        <a href="{{ url_for('web.create_project') }}" class="btn btn-primary mb-3" id="btn-blue-profile">Crear Proyecto</a>
+        <a href="{{ url_for('web.create_project') }}" class="btn btn-primary mb-3" id="btn-blue-admin">Crear Proyecto</a>
         <div class="row">
             {% for project in projects %}
             <div class="col-md-4">
@@ -49,9 +49,9 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-primary" data-toggle="collapse" data-target="#collapse{{ loop.index }}"  id="btn-blue-profile" >Me Interesa</button>
+                        <button class="btn btn-primary" data-toggle="collapse" data-target="#collapse{{ loop.index }}"  id="btn-blue-admin" >Me Interesa</button>
                         <form action="{{ url_for('web.delete_project', project_id=project.id) }}" method="POST" style="display:inline;">
-                            <button type="submit" class="btn btn-danger" id="btn-pink-profile">Eliminar</button>
+                            <button type="submit" class="btn btn-danger" id="btn-pink-admin">Eliminar</button>
                         </form>
                     </div>
                 </div>
