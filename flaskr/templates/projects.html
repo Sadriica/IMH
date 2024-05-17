@@ -32,19 +32,19 @@
 <body>
     <div class="container">
         <h1>Proyectos</h1>
-        <a href="{{ url_for('web.create_project') }}" class="btn btn-primary mb-3" id="btn-blue-admin">Crear Proyecto</a>
+        <a href="{{ url_for('web.create_project') }}" class="btn btn-primary mb-3" id="btn-blue">Crear Proyecto</a>
         <div class="row">
             {% for project in projects %}
             <div class="col-md-4">
-                <div class="card">
-                    <img src="{{ project.image }}" class="card-img-top" alt="Imagen del proyecto">
-                    <div class="card-header" data-toggle="collapse" data-target="#collapse{{ loop.index }}">
-                        <h5 class="card-title">{{ project.title }}</h5>
-                        <p class="card-text">{{ project.location }}</p>
-                        <p class="card-text">{{ project.company }}</p>
+                <div class="card" id="profile-div-card" >
+                    <img src="{{ project.image }}" class="card-img-top" alt="Imagen del proyecto" id="profile-image-card">
+                    <div class="card-header" data-toggle="collapse" data-target="#collapse{{ loop.index }}" id="profile-body-card">
+                        <h5 class="card-title" id="profile-title-card">{{ project.title }}</h5>
+                        <p class="card-text" id="profile-place-card">{{ project.location }}</p>
+                        <p class="card-text" id="profile-company-card" >{{ project.company }}</p>
                     </div>
                     <div id="collapse{{ loop.index }}" class="collapse">
-                        <div class="card-body">
+                        <div class="card-body" id="profile-text-card" >
                             <p>{{ project.description }}</p>
                         </div>
                     </div>
