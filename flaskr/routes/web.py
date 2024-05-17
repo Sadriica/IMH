@@ -54,7 +54,7 @@ def register_company():
     role_in_company = request.form['role_in_company']
     one_time_password = request.form['one_time_password']
 
-    new_company = CompanyAdmin(
+    new_company = models.CompanyAdmin(
         company_name=company_name,
         business_name=business_name,
         main_email=main_email,
