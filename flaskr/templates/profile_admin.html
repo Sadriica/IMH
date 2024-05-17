@@ -76,42 +76,44 @@
 	    </div>
 	</div>    
     </div>
-
-    <h1>Gestionar Empleados</h1>
-    <a href="{{ url_for('web.companiescheck') }}"><button id="btn-blue-admin">Companies check</button></a>
-    <button onclick="showForm('create')" id="btn-pink-admin">Add</button>
-    <a href="{{ url_for('web.projects') }}" class="btn btn-primary" id="profile-btn-blue-empty">Projects</a>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-		<th>Email</th>
-                <th>Compañía</th>
-                <th>Posición</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for employee in employees %}
-            <tr>
-                <td>{{ employee.id }}</td>
-		 <td>{{ employee.email }}</td>
-                <td>{{ employee.name }}</td>
-                <td>{{ employee.company.company_name }}</td>
-                <td>{{ employee.position }}</td>
-                <td>
-                    <button onclick="showForm('edit', {{ {'id': employee.id, 'email': employee.email,'name': employee.name, 'password': employee.password, 'position': employee.position, 'company_id': employee.company_id} | tojson | safe }})" id="btn-blue-admin">Edit</button>
-                    <form action="{{ url_for('web.manage_employees') }}" method="POST" style="display:inline;">
-                        <input type="hidden" name="action" value="delete">
-                        <input type="hidden" name="employee_id" value="{{ employee.id }}">
-                        <button type="submit" id="btn-pink-admin">Delete</button>
-                    </form>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    
+    <div style"justify-content: center; align-items: center;">
+	<h1>Gestionar Empleados</h1>
+	<a href="{{ url_for('web.companiescheck') }}"><button id="btn-blue-admin">Companies check</button></a>
+	<button onclick="showForm('create')" id="btn-pink-admin">Add</button>
+	<a href="{{ url_for('web.projects') }}" class="btn btn-primary" id="profile-btn-blue-empty">Projects</a>
+	<table>
+	    <thead>
+		<tr>
+		    <th>ID</th>
+		    <th>Nombre</th>
+		    <th>Email</th>
+		    <th>Compañía</th>
+		    <th>Posición</th>
+		    <th>Acciones</th>
+		</tr>
+	    </thead>
+	    <tbody>
+		{% for employee in employees %}
+		<tr>
+		    <td>{{ employee.id }}</td>
+		    <td>{{ employee.email }}</td>
+		    <td>{{ employee.name }}</td>
+		    <td>{{ employee.company.company_name }}</td>
+		    <td>{{ employee.position }}</td>
+		    <td>
+			<button onclick="showForm('edit', {{ {'id': employee.id, 'email': employee.email,'name': employee.name, 'password': employee.password, 'position': employee.position, 'company_id': employee.company_id} | tojson | safe }})" id="btn-blue-admin">Edit</button>
+			<form action="{{ url_for('web.manage_employees') }}" method="POST" style="display:inline;">
+			    <input type="hidden" name="action" value="delete">
+			    <input type="hidden" name="employee_id" value="{{ employee.id }}">
+			    <button type="submit" id="btn-pink-admin">Delete</button>
+			</form>
+		    </td>
+		</tr>
+		{% endfor %}
+	    </tbody>
+	</table>
+    </div>
 
     <div id="employee-form" style="display:none;">
         <h2 id="form-title"></h2>
