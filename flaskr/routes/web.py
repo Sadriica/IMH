@@ -58,6 +58,12 @@ def register_company():
     role_in_company = request.form['role_in_company']
     one_time_password = request.form['one_time_password']
 
+    existing_company = CompanyAdmin.query.filter_by(main_email=main_email).first()
+    if existing_company:
+        flash('Error: El correo electrónico principal ya está registrado.')
+        return redirect(url_for('web.index')) 
+
+
     new_company = CompanyAdmin(
         company_name=company_name,
         business_name=business_name,
