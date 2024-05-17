@@ -167,369 +167,337 @@ body, ul, li, p, a, label, input, div {
 
 /*// index */
 
-
 /* Estilos para el contenedor del mensaje de bienvenida */
-
-#index-spaces-div{
-    height: 120px;
+#index-spaces-div {
+    height: 10vh;
 }
 
-
-#index-welcome-img{
-  padding: 20px;
-  width: 450px; 
-  height: 450px;
-  float: center;
+#index-welcome-img {
+    padding: 2em;
+    width: 50vw;
+    height: 50vw;
+    float: center;
 }
 
-#index-welcome-div{
-  text-align: center; /* Centrar el contenido */
-  padding: 80px; /* Añadir espacio alrededor del contenido */
-  background-color: #F2FBFF; /* Color de fondo */
-  border-radius: 10px; /* Bordess redondeados */
+#index-welcome-div {
+    text-align: center; /* Centrar el contenido */
+    padding: 5%; /* Añadir espacio alrededor del contenido */
+    background-color: #F2FBFF; /* Color de fondo */
+    border-radius: 1em; /* Bordes redondeados */
 }
 
 /* Estilos para el texto del mensaje */
 #index-welcome-div p {
-  font-size: 18px; /* Tamaño de fuente */
-  margin-bottom: 10px; /* Espacio inferior */
+    font-size: 1.125rem; /* Tamaño de fuente */
+    margin-bottom: 0.625rem; /* Espacio inferior */
 }
 
-
-#index-welcome-text{
-  color: #201D57;
-  padding-top: -80px;
-  padding: 10px; 
-  font-size: 96px;
+#index-welcome-text {
+    color: #201D57;
+    padding-top: -5%;
+    padding: 1%;
+    font-size: 6rem;
 }
 
-#index-about-div{
-  text-align: left ; /* Centrar el contenido izquierda*/
-  padding: 80px; /* Añadir espacio alrededor del contenido */
-  background-color: #F2FBFF; /* Color de fondo */
-  border-radius: 10px; /* Bordess redondeados */
-  padding-left: 40px;
+#index-about-div {
+    text-align: left; /* Centrar el contenido a la izquierda */
+    padding: 5%; /* Añadir espacio alrededor del contenido */
+    background-color: #F2FBFF; /* Color de fondo */
+    border-radius: 1em; /* Bordes redondeados */
+    padding-left: 2.5%;
 }
 
-#index-about-text{
-  color: #201D57;
-  margin: 20px; 
-  padding: 10px;  
+#index-about-text {
+    color: #201D57;
+    margin: 1.25rem;
+    padding: 1%;
 }
 
-#index-about-container{
-    display: inline-block;    
+#index-about-container {
+    display: inline-block;
 }
 
-#index-about-text-about{
+#index-about-text-about {
     float: left;
     color: #201D57;
-    padding-right: -10px;
-    padding: 5px; 
-    font-size: 96px;
+    padding-right: -0.625rem;
+    padding: 0.3125rem;
+    font-size: 6rem;
 }
 
-#index-about-text-us{
+#index-about-text-us {
     float: left;
-    padding-left: -10px;
+    padding-left: -0.625rem;
     color: #F73859;
-    padding: 5px;
-    font-size: 96px;
+    padding: 0.3125rem;
+    font-size: 6rem;
 }
 
-#index-about-text-p-left{
+#index-about-text-p-left {
     float: left;
     color: #201D57;
-    padding-right: -10px;
-    padding: 5px; 
-    font-size: 96px;
+    padding-right: -0.625rem;
+    padding: 0.3125rem;
+    font-size: 6rem;
 }
 
-#index-about-text-p-right{
+#index-about-text-p-right {
     float: right;
     color: #504F4F;
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: line-height;
-
 }
 
-#index-contact-div{
-  text-align: right; /* Centrar el contenido izquierda*/
-  padding: 80px; /* Añadir espacio alrededor del contenido */
-  background-color: #F2FBFF; /* Color de fondo */
-  border-radius: 10px; /* Bordess redondeados */
-  padding-left: 40px;
+#index-contact-div {
+    text-align: right; /* Centrar el contenido a la derecha */
+    padding: 5%; /* Añadir espacio alrededor del contenido */
+    background-color: #F2FBFF; /* Color de fondo */
+    border-radius: 1em; /* Bordes redondeados */
+    padding-left: 2.5%;
 }
 
-#index-contact-container{
-    display: inline-block;    
+#index-contact-container {
+    display: inline-block;
 }
 
-#index-contact-text-contactin{
+#index-contact-text-contactin {
     float: left;
     color: #201D57;
-    padding-right: -10px;
-    padding: 5px;
-    padding-right: -10px;
-    font-size: 96px; 
+    padding-right: -0.625rem;
+    padding: 0.3125rem;
+    padding-right: -0.625rem;
+    font-size: 6rem;
 }
 
-#index-contact-text-formation{
+#index-contact-text-formation {
     float: left;
-    margin-left: -12px;
+    margin-left: -0.75rem;
     color: #F73859;
-    padding: 5px;
-    font-size: 96px;
+    padding: 0.3125rem;
+    font-size: 6rem;
 }
 
-#index-contact-spaces-div{
-    height: 20px;
+#index-contact-spaces-div {
+    height: 1.25rem;
 }
 
-#index-contact-text-div{
-  text-align: center; /* Centrar el contenido izquierda*/
-  padding: 80px; /* Añadir espacio alrededor del contenido */
-  background-color: #F2FBFF; /* Color de fondo */
-  border-radius: 10px; /* Bordess redondeados */
-  padding-left: 40px;
+#index-contact-text-div {
+    text-align: center; /* Centrar el contenido */
+    padding: 5%; /* Añadir espacio alrededor del contenido */
+    background-color: #F2FBFF; /* Color de fondo */
+    border-radius: 1em; /* Bordes redondeados */
+    padding-left: 2.5%;
 }
 
-#index-contact-text-container{
-    display: inline-block;    
+#index-contact-text-container {
+    display: inline-block;
     text-align: left;
-    padding: 20px;
+    padding: 1.25rem;
 }
-
-
 
 /* Login */
 
-#login-forms-div{
+#login-forms-div {
     text-align: center;
-    padding: 200px;
+    padding: 12.5%;
     background-color: #F2FBFF;
 }
 
-
-
-#login-row-div{
-  text-align: left; /* Centrar el contenido izquierda*/
-  padding: 20px; /* Añadir espacio alrededor del contenido */
-  background-color: #F2FBFF; /* Color de fondo */
-  border-radius: 10px; /* Bordess redondeados */
-  color: #504F4F;
-  padding-left: 201px;
+#login-row-div {
+    text-align: left; /* Centrar el contenido a la izquierda */
+    padding: 1.25rem; /* Añadir espacio alrededor del contenido */
+    background-color: #F2FBFF; /* Color de fondo */
+    border-radius: 1em; /* Bordes redondeados */
+    color: #504F4F;
+    padding-left: 10%;
 }
 
-#login-names{
-    margin-right:-800px;
+#login-names {
+    margin-right: -50vw;
 }
 
-#login-questions{
+#login-questions {
     text-align: left;
 }
 
-#index-login-spaces-div{
-    height: 125px;
+#index-login-spaces-div {
+    height: 10vh;
     background-color: #F2FBFF;
 }
-
-
 
 /* register */
- 
-#register-forms-div{
+
+#register-forms-div {
     text-align: center;
-    padding: 100px;
+    padding: 6.25%;
     background-color: #F2FBFF;
 }
 
-#register-spaces-div{
-    height: 60px;
+#register-spaces-div {
+    height: 5vh;
 }
 
 /* register_response */
 
-#register-response-div{
-  text-align: center; /* Centrar el contenido */
-  padding: 350px; /* Añadir espacio alrededor del contenido */
-  background-color: #F2FBFF; /* Color de fondo */
-  border-radius: 10px; /* Bordess redondeados */
+#register-response-div {
+    text-align: center; /* Centrar el contenido */
+    padding: 21.875%; /* Añadir espacio alrededor del contenido */
+    background-color: #F2FBFF; /* Color de fondo */
+    border-radius: 1em; /* Bordes redondeados */
 }
 
-#register-response-spaces-div{
-    height: 100px;
+#register-response-spaces-div {
+    height: 6.25vh;
 }
 
-#register-response-spaces-div-bottom{
-    height: 100px;
+#register-response-spaces-div-bottom {
+    height: 6.25vh;
 }
-
-
-
 
 /* Profile */
 
-#profile-container{
-    display: inline-block;    
+#profile-container {
+    display: inline-block;
 }
 
-#profile-welcome-div{
-  text-align: center; /* Centrar el contenido */
-  padding: 50px; /* Añadir espacio alrededor del contenido */
-  background-color: #F2FBFF; /* Color de fondo */
-  border-radius: 10px; /* Bordess redondeados */
+#profile-welcome-div {
+    text-align: center; /* Centrar el contenido */
+    padding: 3.125%; /* Añadir espacio alrededor del contenido */
+    background-color: #F2FBFF; /* Color de fondo */
+    border-radius: 1em; /* Bordes redondeados */
 }
 
-#profile-welcome-text{
-  color: #201D57;
-  padding-top: -80px;
-  padding: 10px; 
-  font-size: 60px;
+#profile-welcome-text {
+    color: #201D57;
+    padding-top: -5%;
+    padding: 1%;
+    font-size: 3.75rem;
 }
 
-#profile-welcome-icon{
+#profile-welcome-icon {
     float: left;
     color: #F73859;
-    padding-right: -10px;
-    padding: 5px; 
-    font-size: 86px;
+    padding-right: -0.625rem;
+    padding: 0.3125rem;
+    font-size: 5.375rem;
 }
 
-#profile-welcome-welcome{
+#profile-welcome-welcome {
     float: left;
-    padding-left: -10px;
+    padding-left: -0.625rem;
     color: #201D57;
-    padding: 5px;
-    font-size: 86px;
+    padding: 0.3125rem;
+    font-size: 5.375rem;
 }
 
-#profile-container-cards{
+#profile-container-cards {
     float: center;
-    padding: 50px;
-    height: 650px;
-    background-color: #F2FBFF; 
-
+    padding: 3.125%;
+    height: 65vh;
+    background-color: #F2FBFF;
 }
 
-#profile-div-card{
-    background-color: #F2FBFF; 
+#profile-div-card {
+    background-color: #F2FBFF;
     width: 18rem;
-    border-color:#F73859;
+    border-color: #F73859;
     border-width: 3px;
-    border-radius: 20px;
-    height: 600px;
-    width: 350px;
-
+    border-radius: 1.25rem;
+    height: 37.5rem;
+    width: 21.875rem;
 }
 
-#profile-image-card{
-    padding: 10px;
-    border-radius: 20px;
-    height:250px;
-    width:350px;
-    
-
+#profile-image-card {
+    padding: 0.625rem;
+    border-radius: 1.25rem;
+    height: 15.625rem;
+    width: 21.875rem;
 }
 
-#profile-title-card{
+#profile-title-card {
     float: center;
     color: #504F4F;
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: bold;
-    width: 310px;
-
+    width: 19.375rem;
 }
 
-#profile-place-card{
+#profile-place-card {
     float: center;
     color: #201D57;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
-
 }
 
-#profile-company-card{
+#profile-company-card {
     float: center;
     color: #F73859;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
-
 }
 
-
-#profile-text-card{
-    float: Center;
+#profile-text-card {
+    float: center;
     color: #504F4F;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: line-height;
-
 }
 
-#profile-body-card{
-    float: Center;
-    padding: 10px;
+#profile-body-card {
+    float: center;
+    padding: 0.625rem;
     color: #504F4F;
-    height: 310px;
-    width: 350px;
-
+    height: 19.375rem;
+    width: 21.875rem;
 }
 
-
-#profile-btn-blue-empty{
+#profile-btn-blue-empty {
     color: #201D57;
     border-width: 3px;
     border-color: #201D57;
     border-light: #201D57;
-    background-color:#F2FBFF;
-    border-radius: 30px;
-    height: 50px;
+    background-color: #F2FBFF;
+    border-radius: 1.875rem;
+    height: 3.125rem;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     align: center;
-    line-height: -50;
-    font-size: 20px !important;
+    line-height: -3.125rem;
+    font-size: 1.25rem !important;
     font-weight: 400 !important;
-    padding-top: 10px;
+    padding-top: 0.625rem;
 }
 
-
-#profile-spaces-div{
-    height: 140px;
+#profile-spaces-div {
+    height: 8.75vh;
     background-color: #F2FBFF;
 }
 
 /* btn */
 
-#btn-pink{
+#btn-pink {
     color: #201D57;
-    background-color:#F73859;
-    border-radius: 30px;
-    width: 200px;
-    height: 80px;
+    background-color: #F73859;
+    border-radius: 1.875rem;
+    width: 12.5rem;
+    height: 5rem;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     align: center;
-    line-height: -50;
-    font-size: 35px !important;
+    line-height: -3.125rem;
+    font-size: 2.1875rem !important;
     font-weight: 400 !important;
-    padding-top: 10px;
+    padding-top: 0.625rem;
 }
 
-
-#btn-blue{
+#btn-blue {
     color: #F2FBFF;
-    background-color:#201D57;
-    border-radius: 30px;
-    width: 200px;
-    height: 80px;
+    background-color: #201D57;
+    border-radius: 1.875rem;
+    width: 12.5rem;
+    height: 5rem;
     font-family: 'Roboto', sans-serif;
-    text-align: center;
-    align: center;
-    line-height: -50;
-    font-size: 35px !important;
-    font-weight: 400 !important;
-    padding-top: 10px;
+    text-align: center
 }
 
 #btn-pink-empty{
