@@ -1,5 +1,10 @@
+import os
 
-from \database.py import db
+ROOT_DIR = os.environ.get('ROOT_DIR')
+
+database_path = os.path.join(ROOT_DIR, 'models', 'database.py')
+
+from database_path import db
 
 class CompanyAdmin(db.Model):
     id = db.Column(db.Integer, primary_key=True)
