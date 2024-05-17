@@ -1,7 +1,7 @@
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager
+from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 from models.database import db
 from models.CompanyAdmin import CompanyAdmin
 from models.Employee import Employee
