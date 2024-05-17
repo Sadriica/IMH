@@ -50,48 +50,28 @@
     <div id="profile-container-cards">
 	<div class="container text-center">
 	    <div class="row">
+	    {% for project in projects %}
 		<div class="col">
 		    <div class="card" id="profile-div-card">
-			<img src="../static/assets/img/Eclipse.png" class="card-img-top" id="profile-image-card">
-			<div  id="profile-body-card">
-			    <h5 id="profile-title-card">Modelación Númerica</h5>
-			    <h5 id="profile-place-card">Medellin,Colombia</h5>
-			    <h5 id="profile-company-card">Magneto</h5>
-			    <p class="card-text" id="profile-text-card">Se busca encontrar modelos de computación matematica que permitan llegar a interpretar imagenes de tipo DICOM.</p>
-			    <div>
-				<a href="#" class="btn btn-primary" id="profile-btn-blue-empty">Me Interesa</a>
+			<img src="{{ project.image }}" class="card-img-top" id="profile-image-card">
+			<div class="card-header" data-toggle="collapse" data-target="#collapse{{ loop.index }}">
+			    <h5 id="profile-title-card">{{ project.title }}</h5>
+			    <p id="profile-place-card">{{ project.location }}</p>
+			    <p id="profile-company-card">{{ project.company }}</p>
+			</div>
+			<div id="collapse{{ loop.index }}" class="collapse">
+			    <div class="card-text">
+				<p>{{ project.description }}</p>
 			    </div>
+			</div>
+			<div class="card-footer">
+			    <buttonclass="btn btn-primary" id="profile-btn-blue-empty" data-toggle="collapse" data-target="#collapse{{ loop.index }}">Me Interesa</button>
+			    <form action="{{ url_for('web.delete_project', project_id=project.id) }}" method="POST" style="display:inline;">
+			    </form>
 			</div>
 		    </div>
 		</div>
-		<div class="col">
-		    <div class="card" id="profile-div-card">
-			<img src="../static/assets/img/IMH_platform.png" class="card-img-top" id="profile-image-card">
-			<div class="card-body">
-			    <h5 id="profile-title-card">Sistema Postulación Proyectos Interno</h5>
-			    <h5 id="profile-place-card">Medellin,Colombia</h5>
-			    <h5 id="profile-company-card">Magneto</h5>
-			    <p class="card-text" id="profile-text-card">El proyecto tiene el proposito de crear un MPV sobre un Sistema que permita la oferta y postulación de proyectos dentro de la empresa.</p>
-			    <div>
-				<a href="#" class="btn btn-primary" id="profile-btn-blue-empty">Me Interesa</a>
-			    </div>
-			</div>
-		    </div>
-		</div>
-		<div class="col">
-		    <div class="card" id="profile-div-card">
-			<img src="../static/assets/img/download.jpeg" class="card-img-top" id="profile-image-card">
-			<div class="card-body">
-			    <h5 id="profile-title-card">Software Seguimiento a Procesos</h5>
-			    <h5 id="profile-place-card">Medellin,Colombia</h5>
-			    <h5 id="profile-company-card">Magneto</h5>
-			    <p class="card-text" id="profile-text-card">Con el ideal de agilizar algunos procesos, se ha planteado desarrollar un sistema de software que permita su seguimiento en diferentes situaciones.</p>
-			    <div>
-				<a href="#" class="btn btn-primary" id="profile-btn-blue-empty">Me Interesa</a>
-			    </div>
-			</div>
-		    </div>
-		</div>
+		{% endfor %}
 	    </div>
 	</div>	
     </div>
