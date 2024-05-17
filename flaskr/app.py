@@ -10,6 +10,8 @@ from models.Employee import Employee
 # Importa tus módulos personalizados
 from routes.web import web_bp
 
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+
 def create_app():
     app = Flask(__name__)
     SQLALCHEMY_DATABASE_URI = f'sqlite:///{BASE_DIR}/app.db'  
