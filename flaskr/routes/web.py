@@ -195,5 +195,5 @@ def create_project():
         db.session.commit()
         flash('Proyecto creado con éxito.')
         return redirect(url_for('web.projects'))
-    return render_template('create_project.html')
+    return render_template('create_projects.html')
 
