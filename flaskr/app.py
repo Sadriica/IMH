@@ -7,8 +7,6 @@ from models.database import db
 from models.CompanyAdmin import CompanyAdmin
 from models.Employee import Employee
 
-
-
 # Importa tus módulos personalizados
 from routes.web import web_bp
 

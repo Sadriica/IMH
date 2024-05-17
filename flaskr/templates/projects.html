@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyectos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .card {
+            border: 1px solid #e2e2e2;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .card-header {
+            cursor: pointer;
+        }
+        .more-info {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            {% for project in projects %}
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header" data-toggle="collapse" data-target="#collapse{{ loop.index }}">
+                        <h5 class="card-title">{{ project.title }}</h5>
+                        <p class="card-text">{{ project.location }}</p>
+                        <p class="card-text">{{ project.company }}</p>
+                    </div>
+                    <div id="collapse{{ loop.index }}" class="collapse">
+                        <div class="card-body">
+                            <p>{{ project.description }}</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" data-toggle="collapse" data-target="#collapse{{ loop.index }}">Me Interesa</button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+

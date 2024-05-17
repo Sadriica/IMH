@@ -174,3 +174,29 @@ def companiescheck():
 @web_bp.route('/')
 def index_route():
     return render_template('index.html')
+
+
+@web_bp.route('/projects')
+def projects():
+    projects = [
+        {
+            'title': 'Modelación Numérica',
+            'location': 'Medellín, Colombia',
+            'company': 'Magneto',
+            'description': 'Se busca encontrar modelos de computación matemática que permitan llegar a interpretar imágenes de tipo DICOM.'
+        },
+        {
+            'title': 'Internal Mobility Hub',
+            'location': 'Medellín, Colombia',
+            'company': 'Magneto',
+            'description': 'El proyecto tiene el propósito de crear un MPV sobre un Sistema que permita la oferta y postulación de proyectos dentro de la empresa.'
+        },
+        {
+            'title': 'Software Seguimiento a Procesos',
+            'location': 'Medellín, Colombia',
+            'company': 'Magneto',
+            'description': 'Con el ideal de agilizar algunos procesos, se ha planteado desarrollar un sistema de software que permita su seguimiento en diferentes situaciones.'
+        }
+    ]
+    return render_template('projects.html', projects=projects)
+
