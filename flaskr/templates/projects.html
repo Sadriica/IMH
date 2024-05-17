@@ -32,7 +32,6 @@
 <body>
     <div class="container">
         <h1>Proyectos</h1>
-        <a href="{{ url_for('web.create_project') }}" class="btn btn-primary mb-3" id="btn-blue">Crear Proyecto</a>
         <div class="row">
             {% for project in projects %}
             <div class="col-md-4">
@@ -59,6 +58,8 @@
             {% endfor %}
         </div>
     </div>
+    <a href="{{ url_for('web.create_project') }}" class="btn btn-primary mb-3" id="btn-blue">Crear Proyecto</a>
+
 </body>
 </html>
 
