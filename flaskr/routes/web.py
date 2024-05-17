@@ -4,6 +4,7 @@ from flask_login import LoginManager, UserMixin, login_user, logout_user, login_
 from models.CompanyAdmin import CompanyAdmin
 from models.Employee import Employee
 from models.database import db
+from models.projects import Project
 
 
 import os
