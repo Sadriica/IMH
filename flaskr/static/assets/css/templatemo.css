@@ -500,55 +500,56 @@ body, ul, li, p, a, label, input, div {
     text-align: center
 }
 
-#btn-pink-empty{
+#btn-pink-empty {
     color: #201D57;
-    border-width: 3px;
+    border-width: 0.1875rem;
     border-color: #F73859;
     border-light: #F73859;
-    background-color:#F2FBFF;
-    border-radius: 30px;
-    width: 600px;
-    height: 50px;
+    background-color: #F2FBFF;
+    border-radius: 1.875rem;
+    width: 37.5rem;
+    height: 3.125rem;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     align: center;
-    line-height: -50;
-    font-size: 20px !important;
+    line-height: -3.125rem;
+    font-size: 1.25rem !important;
     font-weight: 400 !important;
-    padding-top: 10px;
+    padding-top: 0.625rem;
 }
 
-#btn-blue-empty{
+#btn-blue-empty {
     color: #201D57;
-    border-width: 3px;
+    border-width: 0.1875rem;
     border-color: #201D57;
     border-light: #201D57;
-    background-color:#F2FBFF;
-    border-radius: 30px;
-    width: 600px;
-    height: 50px;
+    background-color: #F2FBFF;
+    border-radius: 1.875rem;
+    width: 37.5rem;
+    height: 3.125rem;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     align: center;
-    line-height: -50;
-    font-size: 20px !important;
+    line-height: -3.125rem;
+    font-size: 1.25rem !important;
     font-weight: 400 !important;
-    padding-top: 10px;
+    padding-top: 0.625rem;
 }
 
-#btn-gray{
+#btn-gray {
     color: #F2FBFF;
-    background-color:#504F4F;
-    border-radius: 30px;
-    width: 400px;
-    height: 80px;
+    background-color: #504F4F;
+    border-radius: 1.875rem;
+    width: 25rem;
+    height: 5rem;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     align: center;
-    line-height: -50;
-    font-size: 35px !important;
+    line-height: -3.125rem;
+    font-size: 2.1875rem !important;
     font-weight: 400 !important;
-    padding-top: 10px;
+    padding-top: 0.625rem;
+}
 
 
 
