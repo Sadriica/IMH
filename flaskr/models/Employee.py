@@ -1,6 +1,6 @@
 
-from . import db
-from .CompanyAdmin import CompanyAdmin
+from models.database import db
+from models.CompanyAdmin import CompanyAdmin
 
 class Employee(db.Model):
     id = db.Column(db.Integer, primary_key=True)
