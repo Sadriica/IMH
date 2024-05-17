@@ -1,7 +1,7 @@
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from database import db
+from models.database import db
 from models.CompanyAdmin import CompanyAdmin
 from models.Employee import Employee
 
