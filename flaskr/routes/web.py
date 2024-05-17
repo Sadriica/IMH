@@ -43,7 +43,7 @@ def register_response_route():
 
 @web_bp.route("/forgot_password", endpoint="forgot_password")
 def profile_route():
-
+ return user.register()
 @web_bp.route("/register_company", methods=['POST'])
 def register_company():
     print(request.form)
