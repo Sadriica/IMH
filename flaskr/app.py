@@ -21,6 +21,14 @@ def create_app():
     db.init_app(app)
     app.register_blueprint(web_bp)
 
+    login_manager = LoginManager()
+    login_manager.init_app(app)
+    login_manager.login_view = 'web.login'
+
+    def load_user(user_id):
+        return Employee.query.get(int(user_id))
+
+
     from models.CompanyAdmin import CompanyAdmin
     with app.app_context():
         print("Creating database tables...")

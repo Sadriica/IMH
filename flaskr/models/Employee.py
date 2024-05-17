@@ -1,4 +1,5 @@
 
+from flask_login import UserMixin
 from models.database import db
 from models.CompanyAdmin import CompanyAdmin
 

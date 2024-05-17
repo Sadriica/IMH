@@ -35,36 +35,40 @@
     </nav>
     
     <!-- Close Header --!>
-	
-    <div id="login-forms-div" >
-	<div id="login-row-div" class="row">
-	    <div class="col" id="login-names">
-		<h2>Email</h2>
+
+    <form action="{{ url_for('web.login') }}" method="POST">
+	<div id="login-forms-div" >
+	    <div id="login-row-div" class="row">
+		<div class="col" id="login-names">
+		    <h2>Email</h2>
+		</div>
+		<div class="col" id="login-questions">
+		    <input type="email" id="email" name="email" class="form-control" id="btn-pink-empty" required>
+		</div> 
 	    </div>
-	    <div class="col" id="login-questions">
-		<input type="email" class="form-control" id="btn-pink-empty" aria-describedby="emailHelp">
-	    </div> 
-	</div>
-    	<div id="login-row-div" class="row">
-	    <div class="col" id="login-names">
-		<h2>Password</h2>
+		<div id="login-row-div" class="row">
+		    <div class="col" id="login-names">
+			<h2>Password</h2>
+		    </div>
+		    <div class="col" id="login-questions">
+			<input type="email" id="password" name="password" class="form-control" id="btn-blue-empty" required>
+		    </div> 
+		</div>
+		<div id="login-row-div" class="row">
+		    <div class="col" id="login-names">
+			<h2>Company</h2>
+		    </div>
+		<div class="col" id="login-questions">
+		    <select id="btn-pink-empty" id="company_id" name="company_id" required>
+			<option value="" disabled selected>Select a company</option>
+			{% for company in companies %}
+			<option value="{{ company.id }}">{{ company.company_name }}</option>
+			{% endfor %}
+			</select><br>
+		    <!--<input type="email" class="form-control" id="btn-pink-empty" aria-describedby="emailHelp">--!>
+		</div> 
 	    </div>
-	    <div class="col" id="login-questions">
-		<input type="email" class="form-control" id="btn-blue-empty" aria-describedby="emailHelp">
-	    </div> 
-	</div>
-	<div id="login-row-div" class="row">
-	    <div class="col" id="login-names">
-		<h2>Company</h2>
-	    </div>
-	    <div class="col" id="login-questions">
-		<select id="btn-pink-empty" class="form-select">
-		    <option >Magneto</option>
-		    <option >Magneton't</option>
-		</select>
-		<!--<input type="email" class="form-control" id="btn-pink-empty" aria-describedby="emailHelp">--!>
-	    </div> 
-	</div>
+	</form>
 	
 	<div id="index-login-spaces-div" ></div>
 	

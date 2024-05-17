@@ -1,5 +1,6 @@
 from flask import Blueprint
 from flask import request, redirect, url_for, render_template,flash
+from flask_login import login_user, logout_user, login_required, current_user
 from models.CompanyAdmin import CompanyAdmin
 from models.Employee import Employee
 from models.database import db
@@ -26,9 +27,29 @@ web_bp = Blueprint('web', __name__)
 def index_route():
     return user.index()
 
-@web_bp.route("/login", endpoint="login")
-def login_route():
-    return user.login()
+
+@web_bp.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+        company_id = request.form['company_id']
+        employee = Employee.query.filter_by(email=email, company_id=company_id).first()
+        if employee and employee.password == password:
+            login_user(employee)
+            flash('Inicio de sesión exitoso.')
+            return redirect(url_for('web.profile'))
+        else:
+            flash('Correo electrónico, contraseña o compañía incorrectos.')
+    companies = CompanyAdmin.query.all()
+    return render_template('web.login', companies=companies)
+
+@web_bp.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    flash('Has cerrado sesión.')
+    return redirect(url_for('web.login'))
 
 @web_bp.route("/register", endpoint="register")
 def register_route():
