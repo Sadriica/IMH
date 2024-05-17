@@ -78,6 +78,7 @@ def register_company():
 
     return redirect(url_for('web.profile_admin'))
 
+
 @web_bp.route('/employees', methods=['GET', 'POST'])
 def manage_employees():
     if request.method == 'POST':
@@ -87,27 +88,49 @@ def manage_employees():
             password = request.form['password']
             company_id = request.form['company_id']
             position = request.form['position']
-            new_employee = Employee(name=name, password=password, company_id=company_id, position=position)
-            db.session.add(new_employee)
-            db.session.commit()
-            flash('Empleado creado con éxito.')
+            try:
+                new_employee = Employee(name=name, password=password, company_id=company_id, position=position)
+                db.session.add(new_employee)
+                db.session.commit()
+                flash('Empleado creado con éxito.')
+            except Exception as e:
+                db.session.rollback()
+                flash(f'Error al crear empleado: {e}')
+                return redirect(url_for('web.manage_employees'))
         elif action == 'edit':
             employee_id = request.form['employee_id']
             employee = Employee.query.get(employee_id)
             if employee:
-                employee.name = request.form['name']
-                employee.password = request.form['password']
-                employee.company_id = request.form['company_id']
-                employee.position = request.form['position']
-                db.session.commit()
-                flash('Empleado actualizado con éxito.')
+                try:
+                    employee.name = request.form['name']
+                    employee.password = request.form['password']
+                    employee.company_id = request.form['company_id']
+                    employee.position = request.form['position']
+                    db.session.commit()
+                    flash('Empleado actualizado con éxito.')
+                except Exception as e:
+                    db.session.rollback()
+                    flash(f'Error al actualizar empleado: {e}')
+                    return redirect(url_for('web.manage_employees'))
+            else:
+                flash('Empleado no encontrado.')
+                return redirect(url_for('web.manage_employees'))
         elif action == 'delete':
             employee_id = request.form['employee_id']
             employee = Employee.query.get(employee_id)
             if employee:
-                db.session.delete(employee)
-                db.session.commit()
-                flash('Empleado eliminado con éxito.')
+                try:
+                    db.session.delete(employee)
+                    db.session.commit()
+                    flash('Empleado eliminado con éxito.')
+                except Exception as e:
+                    db.session.rollback()
+                    flash(f'Error al eliminar empleado: {e}')
+                    return redirect(url_for('web.manage_employees'))
+            else:
+                flash('Empleado no encontrado.')
+                return redirect(url_for('web.manage_employees'))
+
 
 @web_bp.route('/companies_check', methods=['GET', 'POST'])
 def companiescheck():
