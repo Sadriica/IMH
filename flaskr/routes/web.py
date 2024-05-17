@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask import request, redirect, url_for, render_template,flash
-from flask_login import login_user, logout_user, login_required, current_user
+from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 from models.CompanyAdmin import CompanyAdmin
 from models.Employee import Employee
 from models.database import db
@@ -28,7 +28,7 @@ def index_route():
     return user.index()
 
 
-@web_bp.route('/login', methods=['GET', 'POST'])
+@web_bp.route('/login', methods=['GET', 'POST'], endpoint="login")
 def login():
     if request.method == 'POST':
         email = request.form['email']
@@ -44,12 +44,12 @@ def login():
     companies = CompanyAdmin.query.all()
     return redirect(url_for('web.login'))
 
-#@web_bp.route('/logout')
-#@login_required
-# def logout():
-#    logout_user()
-#    flash('Has cerrado sesión.')
-#    return redirect(url_for('web.login'))
+@web_bp.route('/logout')
+@login_required
+ def logout():
+    logout_user()
+    flash('Has cerrado sesión.')
+    return redirect(url_for('web.login'))
 
 @web_bp.route("/register", endpoint="register")
 def register_route():
