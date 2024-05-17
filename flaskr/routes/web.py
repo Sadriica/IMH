@@ -182,6 +182,11 @@ def projects():
     projects = Project.query.all()
     return render_template('projects.html', projects=projects)
 
+@web_bp.route('/projects_profile')
+def projects_profile():
+    projects = Project.query.all()
+    return render_template('profile.html', projects=projects)
+
 @web_bp.route('/create_project', methods=['GET', 'POST'])
 def create_project():
     if request.method == 'POST':
