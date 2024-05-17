@@ -116,5 +116,5 @@ def companiescheck():
     print(f"Found {len(companies)} companies")  # Agregar depuración
     if not companies:
         flash('No hay compañías disponibles.')
-    return render_template('manage_employees.html', employees=employees, companies=companies)
+    return render_template('profile_admin.html', employees=employees, companies=companies)
 
