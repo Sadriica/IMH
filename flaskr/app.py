@@ -20,6 +20,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'magneto'
 
 db.init_app(app)
+migrate = Migrate(app, db)
  
 login_manager = LoginManager()
 login_manager.init_app(app)
