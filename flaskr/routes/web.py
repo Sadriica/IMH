@@ -110,6 +110,7 @@ def manage_employees():
 
     employees = Employee.query.all()
     companies = CompanyAdmin.query.all()
+    print(f"Found {len(companies)} companies")  # Agregar depuración
     if not companies:
         flash('No hay compañías disponibles.')
     return render_template('manage_employees.html', employees=employees, companies=companies)
