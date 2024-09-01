@@ -26,7 +26,7 @@ Esto instalará todas las dependencias listadas en el archivo requirements.txt e
 
 4. Para ejecutar el servidor usar:
 
-        flask --app /home/srm/Uni/IngSis/IMH/flaskr/app.py --debug run
+        cd .. & flask --app /home/srm/Uni/IngSis/IMH/flaskr/app.py --debug run
 
 
 ### Nota
